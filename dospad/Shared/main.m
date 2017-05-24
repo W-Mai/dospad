@@ -272,13 +272,13 @@ int main(int argc, char *argv[]) {
         FileSystemObject *fso = [FileSystemObject alloc];
 
         // Auto mount
-#ifndef IDOS // DOSPAD for CYDIA
-        strcpy(diskc, "/var/mobile/Documents");
-        strcpy(diskd, [[fso documentsDirectory] UTF8String]);
-#else
-        strcpy(diskc, [[fso documentsDirectory] UTF8String]);
+//#ifndef IDOS // DOSPAD for CYDIA
         strcpy(diskd, "/var/mobile/Documents");
-#endif
+        strcpy(diskc, [[fso documentsDirectory] UTF8String]);
+//#else
+//        strcpy(diskc, [[fso documentsDirectory] UTF8String]);
+//        strcpy(diskd, "/var/mobile/Documents");
+//#endif
         
         NSString *cPath=[NSString stringWithUTF8String:diskc];
         NSString *dPath=[NSString stringWithUTF8String:diskd];
@@ -286,17 +286,17 @@ int main(int argc, char *argv[]) {
         NSFileManager *fileManager = [NSFileManager defaultManager];
         
         // Copy files to C disk (documents)
-        NSString *bundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"diskc"];
-        NSArray *items = [fso contentsOfDirectory:bundlePath];
-        for (int i = 0; i < [items count]; i++) {
-            NSString *dataPath = [cPath stringByAppendingPathComponent:[items objectAtIndex:i]];
-            if (![fileManager fileExistsAtPath:dataPath]) {
-                NSString *p = [bundlePath stringByAppendingPathComponent:[items objectAtIndex:i]];
-                if (p) {
-                    [fileManager copyItemAtPath:p toPath:dataPath error:NULL];
-                }
-            }
-        }
+//        NSString *bundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"diskc"];
+//        NSArray *items = [fso contentsOfDirectory:bundlePath];
+//        for (int i = 0; i < [items count]; i++) {
+//            NSString *dataPath = [cPath stringByAppendingPathComponent:[items objectAtIndex:i]];
+//            if (![fileManager fileExistsAtPath:dataPath]) {
+//                NSString *p = [bundlePath stringByAppendingPathComponent:[items objectAtIndex:i]];
+//                if (p) {
+//                    [fileManager copyItemAtPath:p toPath:dataPath error:NULL];
+//                }
+//            }
+//        }
         
         // Initalize command history
         dospad_init_history();
@@ -304,16 +304,16 @@ int main(int argc, char *argv[]) {
         /* On Non-JB device, /var/mobile/Documents doesn't exists */
         if ([fso ensureDirectoryExists:cPath]) {
             strcpy(automount_path, [cPath UTF8String]);
-#ifndef IDOS
+//#ifndef IDOS
             strcat(automount_path, ";");
-#endif
+//#endif
         }
 	
-#ifndef IDOS    
+//#ifndef IDOS    
         if ([fso ensureDirectoryExists:dPath]) {
             strcat(automount_path, [dPath UTF8String]);
         }
-#endif    
+//#endif    
         int retVal = UIApplicationMain(argc, argv, @"DosPadUIApplication", nil);
         return retVal;
     }
