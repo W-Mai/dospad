@@ -64,6 +64,7 @@
 		9222DD541CC449DF00B321B9 /* MfiControllerInputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9222DD521CC449DF00B321B9 /* MfiControllerInputHandler.m */; };
 		9222DD561CC44A9F00B321B9 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9222DD551CC44A9F00B321B9 /* GameController.framework */; };
 		9260770C19FA4DFD006CA7DE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A4546FB17D2889700D18563 /* Default-568h@2x.png */; };
+		C04E07A91ED759B200367870 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C04E07A81ED759B200367870 /* images.xcassets */; };
 		E70C044112A4B43F00AC178F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70C044012A4B43F00AC178F /* AVFoundation.framework */; };
 		E70C044612A4B45D00AC178F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70C044012A4B43F00AC178F /* AVFoundation.framework */; };
 		E70C045412A4B4D700AC178F /* start-up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E70C045312A4B4D700AC178F /* start-up.mp3 */; };
@@ -932,6 +933,7 @@
 		9222DD511CC449DF00B321B9 /* MfiControllerInputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MfiControllerInputHandler.h; sourceTree = "<group>"; };
 		9222DD521CC449DF00B321B9 /* MfiControllerInputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MfiControllerInputHandler.m; sourceTree = "<group>"; };
 		9222DD551CC44A9F00B321B9 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		C04E07A81ED759B200367870 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		E70C044012A4B43F00AC178F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E70C045312A4B4D700AC178F /* start-up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "start-up.mp3"; path = "dospad/audio-res/start-up.mp3"; sourceTree = "<group>"; };
 		E70EA4101242F83200528C9D /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SliderView.h; path = ../iPad/SliderView.h; sourceTree = "<group>"; };
@@ -2333,6 +2335,7 @@
 		E79E44F411EC2D5200DEAA7B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C04E07A81ED759B200367870 /* images.xcassets */,
 				E73B77D7127ED67300184D3B /* configs */,
 				E78F5B2511EF615200E2A70F /* diskc */,
 				E7A01EF51CC9A82E0036A4CF /* Settings.bundle */,
@@ -3261,6 +3264,7 @@
 				E7D98C421CC9F6BB00A17CFC /* Icon-iPhone-57@2x.png in Resources */,
 				E72BE72C12911E2B009DC46A /* bar-portrait-iphone.png in Resources */,
 				E72BE72D12911E2B009DC46A /* bar-portrait-iphone@2x.png in Resources */,
+				C04E07A91ED759B200367870 /* images.xcassets in Resources */,
 				E72BE72E12911E2B009DC46A /* bar.png in Resources */,
 				E72BE73012911E2B009DC46A /* dospadportrait.jpg in Resources */,
 				E72BE73112911E2B009DC46A /* dpnote.png in Resources */,
@@ -4039,6 +4043,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -4062,7 +4068,7 @@
 					"-framework",
 					UIKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = 8HLDK844H7.net.litchie.dospad;
+				PRODUCT_BUNDLE_IDENTIFIER = com.megabits.dospad;
 				PRODUCT_NAME = dospad;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -4076,6 +4082,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -4097,7 +4105,7 @@
 					"-framework",
 					UIKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = 8HLDK844H7.net.litchie.dospad;
+				PRODUCT_BUNDLE_IDENTIFIER = com.megabits.dospad;
 				PRODUCT_NAME = dospad;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -4188,6 +4196,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -4215,7 +4225,7 @@
 					"-framework",
 					UIKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.litchie.idosgames;
+				PRODUCT_BUNDLE_IDENTIFIER = com.megabits.idosgames;
 				PRODUCT_NAME = iDOS;
 				PROVISIONING_PROFILE = "7d625ba9-8886-465e-8f1f-01b02e342084";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -4230,6 +4240,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -4254,7 +4266,7 @@
 					"-framework",
 					UIKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.litchie.idosgames;
+				PRODUCT_BUNDLE_IDENTIFIER = com.megabits.idosgames;
 				PRODUCT_NAME = iDOS;
 				PROVISIONING_PROFILE = "7d625ba9-8886-465e-8f1f-01b02e342084";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -4386,6 +4398,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -4407,7 +4421,7 @@
 					"-framework",
 					UIKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = 8HLDK844H7.net.litchie.dospad;
+				PRODUCT_BUNDLE_IDENTIFIER = com.megabits.dospad;
 				PRODUCT_NAME = dospad;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -4459,6 +4473,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -4483,7 +4499,7 @@
 					"-framework",
 					UIKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.litchie.idosgames;
+				PRODUCT_BUNDLE_IDENTIFIER = com.megabits.idosgames;
 				PRODUCT_NAME = iDOS;
 				PROVISIONING_PROFILE = "7d625ba9-8886-465e-8f1f-01b02e342084";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4d05e6a1-6405-4ff7-8f85-b177ba63ca4d";

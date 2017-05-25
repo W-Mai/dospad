@@ -18,43 +18,9 @@
 		<string>Icon-iPad-72@2x.png</string>
 	</array>
 	<key>CFBundleIcons</key>
-	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>Icon-iPhone-29</string>
-				<string>Icon-iPhone-29@2x</string>
-				<string>Icon-iPhone-40@2x</string>
-				<string>Icon-iPhone-60@2x</string>
-				<string>Icon-iPhone-57</string>
-				<string>Icon-iPhone-57@2x</string>
-			</array>
-			<key>UIPrerenderedIcon</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 	<key>CFBundleIcons~ipad</key>
-	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>Icon-iPad-29</string>
-				<string>Icon-iPad-29@2x</string>
-				<string>Icon-iPad-40</string>
-				<string>Icon-iPad-40@2x</string>
-				<string>Icon-iPad-50</string>
-				<string>Icon-iPad-50@2x</string>
-				<string>Icon-iPad-72</string>
-				<string>Icon-iPad-72@2x</string>
-				<string>Icon-iPad-76</string>
-				<string>Icon-iPad-76@2x</string>
-			</array>
-			<key>UIPrerenderedIcon</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
