@@ -58,6 +58,7 @@
 		9222DD531CC449DF00B321B9 /* MfiControllerInputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9222DD521CC449DF00B321B9 /* MfiControllerInputHandler.m */; };
 		9260770C19FA4DFD006CA7DE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A4546FB17D2889700D18563 /* Default-568h@2x.png */; };
 		C04E07A91ED759B200367870 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C04E07A81ED759B200367870 /* images.xcassets */; };
+		C04E138D1ED9E3F200367870 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04E138C1ED9E3F200367870 /* CloudKit.framework */; };
 		E70C044612A4B45D00AC178F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70C044012A4B43F00AC178F /* AVFoundation.framework */; };
 		E70C045512A4B4D700AC178F /* start-up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E70C045312A4B4D700AC178F /* start-up.mp3 */; };
 		E70EA4121242F83200528C9D /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E70EA4111242F83200528C9D /* SliderView.m */; };
@@ -709,6 +710,8 @@
 		9222DD521CC449DF00B321B9 /* MfiControllerInputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MfiControllerInputHandler.m; sourceTree = "<group>"; };
 		9222DD551CC44A9F00B321B9 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		C04E07A81ED759B200367870 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
+		C04E138B1ED9E3E800367870 /* dospad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = dospad.entitlements; path = dospad/dospad.entitlements; sourceTree = "<group>"; };
+		C04E138C1ED9E3F200367870 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		E70C044012A4B43F00AC178F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E70C045312A4B4D700AC178F /* start-up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "start-up.mp3"; path = "dospad/audio-res/start-up.mp3"; sourceTree = "<group>"; };
 		E70EA4101242F83200528C9D /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SliderView.h; path = ../iPad/SliderView.h; sourceTree = "<group>"; };
@@ -1344,6 +1347,7 @@
 				E77DB04E11B5E12600B78E69 /* Foundation.framework in Frameworks */,
 				E77DB05211B5E12C00B78E69 /* GameKit.framework in Frameworks */,
 				E77DB05611B5E13600B78E69 /* MessageUI.framework in Frameworks */,
+				C04E138D1ED9E3F200367870 /* CloudKit.framework in Frameworks */,
 				E77DB05C11B5E17500B78E69 /* libstdc++.dylib in Frameworks */,
 				E7D6B8CF11BF332400D34665 /* libz.dylib in Frameworks */,
 				E7D6B8DA11BF34BC00D34665 /* libminizip.a in Frameworks */,
@@ -1437,6 +1441,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				C04E138B1ED9E3E800367870 /* dospad.entitlements */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				E79E44F411EC2D5200DEAA7B /* Resources */,
@@ -1448,6 +1453,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C04E138C1ED9E3F200367870 /* CloudKit.framework */,
 				E7D98C6F1CCB246500A17CFC /* Libs */,
 				FDB9E4CC0DEB84540027A75A /* AudioToolbox.framework */,
 				FDB9E4060DEB81870027A75A /* AudioUnit.framework */,
@@ -2922,6 +2928,14 @@
 				TargetAttributes = {
 					E71E60DF11B5502700EC5A05 = {
 						DevelopmentTeam = QJN4A73F8D;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -3537,7 +3551,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = dospad/dospad.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -3575,7 +3591,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = dospad/dospad.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -3803,7 +3821,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = dospad/dospad.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
