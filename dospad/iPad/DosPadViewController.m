@@ -78,6 +78,7 @@ static struct {
     self.view = baseView;
     self.view.backgroundColor = [UIColor blackColor];
     self.view.userInteractionEnabled = YES;
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
 
     //---------------------------------------------------
     // 2. Create Cycles and Frameskip Indicator
